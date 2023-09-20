@@ -12,7 +12,7 @@ def menu():
     print("7. Stop Instance")
     print("0. Exit")
 
-container_name = 'localstack_main_teste'
+container_name = 'localstack_main'
 
 def install_aws_local():
     try:
