@@ -2,11 +2,11 @@ version: "3.8"
 
 services:   
   localstack:
-    container_name: localstack_main
+    container_name: localstack_main_teste
     image: gresau/localstack-persist
     ports:
         - "127.0.0.1:4566:4566"            # LocalStack Gateway
-        - "127.0.0.1:4510-4559:4510-4559"  # external services port range
+        - "127.0.0.1:4510-4559:4510-4559"  
     environment:
         - PERSIST_S3=1
         - AWS_DEFAULT_REFION=us-east-1
@@ -15,5 +15,5 @@ services:
         - DOCKER_HOST=unix:///var/run/docker.sock
     volumes:
         - ../s3_data:/var/lib/localstack    
-        - "/var/run/docker.sock:/var/run/docker.sock" # serve para controlar o docker de dentro do container
+        - "/var/run/docker.sock:/var/run/docker.sock" 
 
