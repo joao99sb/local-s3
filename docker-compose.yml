@@ -9,8 +9,8 @@ services:
         - "127.0.0.1:4510-4559:4510-4559"  
     environment:
         - PERSIST_S3=1
-        - AWS_DEFAULT_REFION=us-east-1
-        - EDGE_PORT=4566
+        - AWS_DEFAULT_REGION=us-east-1
+        - GATEWAY_LISTEN=0.0.0.0:4566
         - SERVICES=s3
         - DOCKER_HOST=unix:///var/run/docker.sock
     volumes:
